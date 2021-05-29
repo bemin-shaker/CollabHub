@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { enterRoom } from "../features/appSlice";
@@ -9,6 +9,7 @@ import { auth } from "../firebase";
 import { groupName } from "./groupPrompt";
 
 function SidebarOption({ Icon, title, addChannelOption, id }) {
+  const [groupName] = useState(JSON.parse(localStorage.getItem("groupName")));
   const [user] = useAuthState(auth);
   const dispatch = useDispatch();
 

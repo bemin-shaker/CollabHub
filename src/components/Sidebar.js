@@ -1,31 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
-import CreateIcon from "@material-ui/icons/Create";
 import InsertCommentIcon from "@material-ui/icons/InsertComment";
 import InboxIcon from "@material-ui/icons/Inbox";
-import DraftsIcon from "@material-ui/icons/Drafts";
 import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
-import FileCopyIcon from "@material-ui/icons/FileCopy";
-import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
-import AppsIcon from "@material-ui/icons/Apps";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import SidebarOption from "./SidebarOption";
 import AddIcon from "@material-ui/icons/Add";
 import { db } from "../firebase";
 import { useCollection } from "react-firebase-hooks/firestore";
-
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
-
-import { groupName } from "./groupPrompt";
+//import { groupName } from "./groupPrompt";
 
 function Sidebar() {
-  const [user] = useAuthState(auth);
-  //const userN = user?.uid;
-  const [channels, loading, error] = useCollection(db.collection(groupName));
+  const [groupName] = useState(JSON.parse(localStorage.getItem("groupName")));
 
+  const [user] = useAuthState(auth);
+
+  //const userN = user?.uid;
+
+  const [channels, loading, error] = useCollection(db.collection(groupName));
   return (
     <SidebarContainer>
       <SidebarHeader>
@@ -59,8 +54,8 @@ const SidebarContainer = styled.div`
   color: white;
   flex: 0.3;
   border-top: 1px solid #1f487e;
-  max-width: 260px;
-  min-width: 200px;
+  max-width: 250px;
+  min-width: 250px;
   margin-top: 60px;
 
   > hr {
@@ -102,7 +97,8 @@ const SidebarInfo = styled.div`
   > h3 > .MuiSvgIcon-root {
     font-size: 14px;
     margin-top: 1px;
-    margin-right: 2px;
+    margin-right: 1.5px;
+    transform: translateX(-2px);
     color: green;
   }
 `;

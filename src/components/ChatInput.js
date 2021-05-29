@@ -6,9 +6,11 @@ import firebase from "firebase";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
-import { groupName } from "./groupPrompt";
+//import { groupName } from "./groupPrompt";
 
 function ChatInput({ channelName, channelId, chatRef }) {
+  const [groupName] = useState(JSON.parse(localStorage.getItem("groupName")));
+
   const [user] = useAuthState(auth);
   const [input, setInput] = useState("");
 

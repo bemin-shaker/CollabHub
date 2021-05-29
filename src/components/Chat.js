@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
@@ -12,9 +12,10 @@ import Message from "./Message";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { auth } from "../firebase";
-import { groupName } from "./groupPrompt";
-
+//import { groupName } from "./groupPrompt";
 function Chat() {
+  const [groupName] = useState(JSON.parse(localStorage.getItem("groupName")));
+
   const [user] = useAuthState(auth);
   const chatRef = useRef(null);
   const roomId = useSelector(selectRoomId);
@@ -125,5 +126,4 @@ const ChatContainer = styled.div`
   flex: 0.7;
   flex-grow: 1;
   overflow-y: scroll;
-  margin-top: 60px;
 `;
