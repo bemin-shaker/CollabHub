@@ -6,6 +6,7 @@ import firebase from "firebase";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
+import { groupName } from "./groupPrompt";
 
 function ChatInput({ channelName, channelId, chatRef }) {
   const [user] = useAuthState(auth);
@@ -17,8 +18,9 @@ function ChatInput({ channelName, channelId, chatRef }) {
     if (!channelId) {
       return false;
     }
+    //const userN = user?.uid;
 
-    db.collection("rooms").doc(channelId).collection("messages").add({
+    db.collection(groupName).doc(channelId).collection("messages").add({
       message: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       user: user.displayName,

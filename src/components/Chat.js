@@ -9,17 +9,23 @@ import ChatInput from "./ChatInput";
 import { useCollection, useDocument } from "react-firebase-hooks/firestore";
 import { db } from "../firebase";
 import Message from "./Message";
+import { useAuthState } from "react-firebase-hooks/auth";
+
+import { auth } from "../firebase";
+import { groupName } from "./groupPrompt";
 
 function Chat() {
+  const [user] = useAuthState(auth);
   const chatRef = useRef(null);
   const roomId = useSelector(selectRoomId);
+  //const userN = user?.uid;
   const [roomDetails] = useDocument(
-    roomId && db.collection("rooms").doc(roomId)
+    roomId && db.collection(groupName).doc(roomId)
   );
   const [roomMessages, loading] = useCollection(
     roomId &&
       db
-        .collection("rooms")
+        .collection(groupName)
         .doc(roomId)
         .collection("messages")
         .orderBy("timestamp", "asc")
@@ -80,7 +86,7 @@ function Chat() {
 export default Chat;
 
 const ChatBottom = styled.div`
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 `;
 const Header = styled.div`
   display: flex;

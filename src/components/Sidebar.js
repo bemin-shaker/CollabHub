@@ -19,32 +19,29 @@ import { useCollection } from "react-firebase-hooks/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
 
+import { groupName } from "./groupPrompt";
+
 function Sidebar() {
   const [user] = useAuthState(auth);
-  const [channels, loading, error] = useCollection(db.collection("rooms"));
+  //const userN = user?.uid;
+  const [channels, loading, error] = useCollection(db.collection(groupName));
+
   return (
     <SidebarContainer>
       <SidebarHeader>
         <SidebarInfo>
-          <h2>Stevens 2023</h2>
+          <h2>{groupName}</h2>
           <h3>
             <FiberManualRecordIcon />
             {user.displayName}
           </h3>
         </SidebarInfo>
-        {/* <CreateIcon /> */}
       </SidebarHeader>
 
       <SidebarOption Icon={InsertCommentIcon} title="Threads" />
       <SidebarOption Icon={InboxIcon} title="Mentions & reactions" />
-      {/* <SidebarOption Icon={DraftsIcon} title="Saved Items" /> */}
       <SidebarOption Icon={BookmarkBorderIcon} title="Channel browser" />
-      {/* <SidebarOption Icon={PeopleAltIcon} title="People & user groups" />
-      <SidebarOption Icon={AppsIcon} title="Apps" />
-      <SidebarOption Icon={FileCopyIcon} title="File browser" /> */}
-      {/* <SidebarOption Icon={ExpandLessIcon} title="Show Less" />
-      <hr /> */}
-      {/* <SidebarOption Icon={ExpandMoreIcon} title="Show More" /> */}
+
       <hr />
       <SidebarOption Icon={AddIcon} addChannelOption title="Add channel" />
 

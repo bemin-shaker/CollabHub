@@ -5,13 +5,17 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import styled from "styled-components";
 import Chat from "./components/Chat";
+import GroupPrompt from "./components/groupPrompt";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
 import Login from "./components/Login";
+import { db } from "./firebase";
+
 var Spinner = require("react-spinkit");
 
 function App() {
   const [user, loading] = useAuthState(auth);
+
   if (loading) {
     return (
       <AppLoading>
@@ -36,6 +40,7 @@ function App() {
                 <Route path="/" exact>
                   <Chat />
                 </Route>
+                <GroupPrompt />
               </Switch>
             </AppBody>
           </>
