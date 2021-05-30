@@ -1,0 +1,14 @@
+input,
+::placeholder {
+  color: rgb(212, 211, 211) !important;
+}
+
+.form-input:hover {
+  background-color: #102041 !important;
+  padding: 5px !important;
+}
+
+button:hover,
+button:focus {
+  outline: none;
+}

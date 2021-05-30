@@ -1,5 +1,4 @@
-import React from "react";
-import "./App.css";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
@@ -38,7 +37,7 @@ function App() {
             <AppBody>
               <Sidebar />
               <Switch>
-                <Route path="/" exact>
+                <Route>
                   <Chat />
                 </Route>
               </Switch>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import InsertCommentIcon from "@material-ui/icons/InsertComment";
 import InboxIcon from "@material-ui/icons/Inbox";
@@ -11,16 +10,14 @@ import { db } from "../firebase";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
-//import { groupName } from "./groupPrompt";
 
-function Sidebar() {
+function Sidebar(props) {
   const [groupName] = useState(JSON.parse(localStorage.getItem("groupName")));
 
   const [user] = useAuthState(auth);
 
-  //const userN = user?.uid;
+  const [channels] = useCollection(db.collection(groupName));
 
-  const [channels, loading, error] = useCollection(db.collection(groupName));
   return (
     <SidebarContainer>
       <SidebarHeader>
