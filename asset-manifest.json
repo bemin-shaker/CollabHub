@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/CollabHub/static/css/main.da921f94.chunk.css",
-    "main.js": "/CollabHub/static/js/main.c6ce4a12.chunk.js",
-    "main.js.map": "/CollabHub/static/js/main.c6ce4a12.chunk.js.map",
+    "main.css": "/CollabHub/static/css/main.672c260a.chunk.css",
+    "main.js": "/CollabHub/static/js/main.ac866c5e.chunk.js",
+    "main.js.map": "/CollabHub/static/js/main.ac866c5e.chunk.js.map",
     "runtime-main.js": "/CollabHub/static/js/runtime-main.f334504d.js",
     "runtime-main.js.map": "/CollabHub/static/js/runtime-main.f334504d.js.map",
     "static/css/2.2d3242fe.chunk.css": "/CollabHub/static/css/2.2d3242fe.chunk.css",
-    "static/js/2.42b24293.chunk.js": "/CollabHub/static/js/2.42b24293.chunk.js",
-    "static/js/2.42b24293.chunk.js.map": "/CollabHub/static/js/2.42b24293.chunk.js.map",
+    "static/js/2.a3a444a2.chunk.js": "/CollabHub/static/js/2.a3a444a2.chunk.js",
+    "static/js/2.a3a444a2.chunk.js.map": "/CollabHub/static/js/2.a3a444a2.chunk.js.map",
     "index.html": "/CollabHub/index.html",
     "static/css/2.2d3242fe.chunk.css.map": "/CollabHub/static/css/2.2d3242fe.chunk.css.map",
-    "static/css/main.da921f94.chunk.css.map": "/CollabHub/static/css/main.da921f94.chunk.css.map",
-    "static/js/2.42b24293.chunk.js.LICENSE.txt": "/CollabHub/static/js/2.42b24293.chunk.js.LICENSE.txt"
+    "static/css/main.672c260a.chunk.css.map": "/CollabHub/static/css/main.672c260a.chunk.css.map",
+    "static/js/2.a3a444a2.chunk.js.LICENSE.txt": "/CollabHub/static/js/2.a3a444a2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f334504d.js",
     "static/css/2.2d3242fe.chunk.css",
-    "static/js/2.42b24293.chunk.js",
-    "static/css/main.da921f94.chunk.css",
-    "static/js/main.c6ce4a12.chunk.js"
+    "static/js/2.a3a444a2.chunk.js",
+    "static/css/main.672c260a.chunk.css",
+    "static/js/main.ac866c5e.chunk.js"
   ]
 }
