@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/CollabHub/static/css/main.672c260a.chunk.css",
-    "main.js": "/CollabHub/static/js/main.e79e0069.chunk.js",
-    "main.js.map": "/CollabHub/static/js/main.e79e0069.chunk.js.map",
+    "main.js": "/CollabHub/static/js/main.c1af08f1.chunk.js",
+    "main.js.map": "/CollabHub/static/js/main.c1af08f1.chunk.js.map",
     "runtime-main.js": "/CollabHub/static/js/runtime-main.f334504d.js",
     "runtime-main.js.map": "/CollabHub/static/js/runtime-main.f334504d.js.map",
     "static/css/2.2d3242fe.chunk.css": "/CollabHub/static/css/2.2d3242fe.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.2d3242fe.chunk.css",
     "static/js/2.215aae03.chunk.js",
     "static/css/main.672c260a.chunk.css",
-    "static/js/main.e79e0069.chunk.js"
+    "static/js/main.c1af08f1.chunk.js"
   ]
 }
