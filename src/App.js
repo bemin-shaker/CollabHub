@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import styled from "styled-components";
 import Chat from "./components/Chat";
-import GroupPrompt from "./components/groupPrompt";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
 import Login from "./components/Login";
@@ -36,11 +35,7 @@ function App() {
             <Header />
             <AppBody>
               <Sidebar />
-              <Switch>
-                <Route>
-                  <Chat />
-                </Route>
-              </Switch>
+              <Chat />
             </AppBody>
           </>
         )}

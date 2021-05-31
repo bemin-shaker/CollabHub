@@ -47,6 +47,7 @@ const GroupContain = styled.div`
     border: 0 !important;
     padding: 12px !important;
     width: 300px;
+    margin-right: 5px;
 
     cursor: pointer;
 

@@ -31,7 +31,6 @@ const LoginContainer = styled.div`
   display: grid;
   place-items: center;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.05);
-  font-family: Montserrat;
 `;
 const LoginInnerContainer = styled.div`
   max-width: 80vw;
@@ -47,7 +46,7 @@ const LoginInnerContainer = styled.div`
   }
 
   > h1 {
-    font-weight: 900;
+    font-weight: 700;
     color: #1d3461;
     font-size: 40px;
     margin-bottom: 13px;
